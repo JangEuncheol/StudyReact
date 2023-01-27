@@ -1,9 +1,17 @@
 import React from "react";
 
-const UserList = () => {
-  return <div>
-    "User List"
-  </div>
+import UserItem from "./UserItem"
+
+const UserList = (props) => {
+  return <ul>
+    {props.items.map(user => (
+      <UserItem
+        key={user.id}
+        name={user.getName()}
+        age={user.getAge()}
+      ></UserItem>
+    ))}
+  </ul>
 };
 
 export default UserList;

@@ -1,5 +1,10 @@
 .box {
   display: flex;
-  width: 75%;
+  justify-content: flex-start;
+  width: fit-content;
   background-color: white;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  margin: 10px 0px;
 }
