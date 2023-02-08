@@ -14,11 +14,19 @@ function App() {
       return prevTodos.concat(newTodo);
     });
   };
+
+  const deleteTodoHandler = (id: string) => {
+    const updatedTodos = todos.filter(todo => todo.id !== id)
+    setTodos(updatedTodos);
+    
+    // const updatedTodos = todos.filter() 
+    // setTodos();
+  };
   
   return (
     <div>
       <NewTodo onAddTodo={addTodoHandler} />
-      <Todos items={todos} />
+      <Todos items={todos} onDeleteTodo={deleteTodoHandler} />
     </div>
   );
 }
